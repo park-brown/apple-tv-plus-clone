@@ -121,7 +121,7 @@ const APPBAR_1 = (props) => {
 	return (
 		<React.Fragment>
 			<HideOnScroll {...props}>
-				<AppBar sx={{ bgcolor: 'rgba(0,0,0,0.92)' }}>
+				<AppBar position='fixed' sx={{ bgcolor: 'rgba(0,0,0,0.92)' }}>
 					<Toolbar
 						sx={{
 							mx: 'auto',
@@ -129,7 +129,7 @@ const APPBAR_1 = (props) => {
 							maxWidth: '960px',
 							justifyContent: 'space-between',
 							alignItems: 'center',
-							minHeight: { md: '44px', sm: '44px', xs: '44px' }
+							minHeight: { md: '48px', sm: '48px', xs: '48px' }
 						}}>
 						{/*Desktop and tablet section */}
 						{below_600 ? (
@@ -140,7 +140,6 @@ const APPBAR_1 = (props) => {
 					</Toolbar>
 				</AppBar>
 			</HideOnScroll>
-			<Toolbar />
 		</React.Fragment>
 	);
 };
@@ -151,7 +150,8 @@ function HideOnScroll(props) {
 	// will default to window.
 	// This is only being set here because the demo is in an iframe.
 	const trigger = useScrollTrigger({
-		target: undefined
+		target: undefined,
+		disableHysteresis: true
 	});
 
 	return (
