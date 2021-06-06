@@ -8,7 +8,7 @@ const APPBAR_2 = () => {
 		disableHysteresis: true,
 		threshold: 48
 	});
-	console.log('trigger:', trigger);
+
 	return (
 		<AppBar
 			position='fixed'

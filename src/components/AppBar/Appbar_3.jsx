@@ -18,7 +18,7 @@ const APPBAR_3 = () => {
 				// opacity: `${trigger === true ? 0 : 1}`,
 				// visibility: `${trigger === true ? 'hidden' : 'visible'}`,
 				display: `${trigger === true ? 'none' : 'flex'}`,
-				transition: `${theme.transitions.create(['transform', 'display'], { delay: 300 })}`,
+				transition: `${theme.transitions.create(['transform', 'display'])}`,
 				transform: () => (trigger === true ? `translateY(-48px)` : '')
 			}}>
 			<Toolbar
