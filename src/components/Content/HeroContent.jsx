@@ -12,9 +12,9 @@ const HeroContent = () => {
 				zIndex: 1,
 				pointerEvents: 'none',
 				height: '100vh',
-				width: { md: '980px', sm: '87.5%', xs: '87.5%' }
+				width: { md: '860px', sm: '87.5%', xs: '87.5%' }
 			}}>
-			<FadeOut end={640}>
+			<FadeOut start={48} end={150}>
 				<Box
 					sx={{
 						position: 'absolute',

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Grid, Box, useScrollTrigger, useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
+
+import FadeIn from './FadeIn';
 const navBarHeight = {
 	desktop: {
 		normal: '145px',
@@ -45,7 +47,7 @@ const HeroBackground = () => {
 				position: 'absolute',
 				top: 0,
 				left: 0,
-				minHeight: '1492px',
+				minHeight: 'calc(100vh + 1800px)', //height cover hero section and offer section
 				width: '100%'
 			}}>
 			<Box
@@ -71,6 +73,19 @@ const HeroBackground = () => {
 						position: 'relative',
 						zIndex: -1
 					}}></Box>
+				{/*Background color */}
+				<FadeIn start={48} end={150}>
+					<Box
+						sx={{
+							width: '100%',
+							height: '100%',
+							backgroundColor: '#000',
+							position: 'absolute',
+							top: 0,
+							left: 0,
+							zIndex: -1
+						}}></Box>
+				</FadeIn>
 			</Box>
 		</Grid>
 	);
