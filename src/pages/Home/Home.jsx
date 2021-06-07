@@ -1,12 +1,14 @@
 import React from 'react';
-import ContentOne from '../../components/Content/ContentOne';
+import HeroSection from '../../components/Content/HeroSection';
 import { Grid } from '@material-ui/core';
 import APPBAR from '../../components/AppBar/APPBAR';
 const Home = () => {
 	return (
-		<Grid container sx={{ position: 'relative' }}>
+		<Grid container>
 			<APPBAR />
-			<ContentOne />
+			<Grid container item component='main' xs={12} sx={{ height: 'auto' }}>
+				<HeroSection />
+			</Grid>
 		</Grid>
 	);
 };
