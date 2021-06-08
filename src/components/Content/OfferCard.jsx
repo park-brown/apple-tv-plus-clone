@@ -4,7 +4,7 @@ const OfferCard = ({ item }) => {
 	return (
 		<Grid
 			item
-			xs={12}
+			xs={10}
 			sm={7}
 			md={4}
 			sx={{
@@ -44,6 +44,7 @@ const OfferCard = ({ item }) => {
 					color: '#a1a1a6',
 					fontSize: { xs: '17px' },
 					fontWeight: 400,
+					maxWidth: { sm: '240px', xs: '240px' },
 					letterSpacing: '-.022em',
 					lineHeight: 1.47059
 				}}>

@@ -3,7 +3,7 @@ import { useTheme } from '@material-ui/core/styles';
 import { useScroll } from './useScroll';
 import { Box } from '@material-ui/core';
 const FadeIn = (props) => {
-	const { children, end, start, delay } = props;
+	const { children, end, start, delay, duration } = props;
 	const scrollY = useScroll();
 	const theme = useTheme();
 	const setOpacity = () => {
@@ -21,7 +21,8 @@ const FadeIn = (props) => {
 		<Box
 			sx={{
 				opacity: `${opacity}`,
-				transition: `${theme.transitions.create(['opacity'], { delay: delay })}`
+
+				transition: `${theme.transitions.create(['opacity'], { delay: delay, duration: duration })}`
 			}}>
 			{children}
 		</Box>

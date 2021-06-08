@@ -3,6 +3,7 @@ import { Grid, Box, useScrollTrigger, useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 
 import FadeIn from './FadeIn';
+
 const navBarHeight = {
 	desktop: {
 		normal: '145px',
@@ -39,6 +40,7 @@ const HeroBackground = () => {
 			return navBarHeight.desktop.normal;
 		}
 	};
+
 	return (
 		<Grid
 			item
@@ -47,7 +49,7 @@ const HeroBackground = () => {
 				position: 'absolute',
 				top: 0,
 				left: 0,
-				minHeight: 'calc(100vh + 1800px)', //height cover hero section and offer section
+				minHeight: `calc(100vh) ;`, //height cover hero section and offer section
 				width: '100%'
 			}}>
 			<Box
