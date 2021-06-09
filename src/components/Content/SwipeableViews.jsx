@@ -1,5 +1,5 @@
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay, virtualize } from 'react-swipeable-views-utils';
+import { autoPlay } from 'react-swipeable-views-utils';
 import { styled } from '@material-ui/system';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 // const VirtualizeSwipeableViews = virtualize(SwipeableViews);
@@ -27,8 +27,6 @@ export const CustomSwipeableViews = styled(AutoPlaySwipeableViews, {
 		display: 'flex',
 		width: '278px',
 		height: '494px',
-		position: 'relative',
-		zIndex: 2,
 
 		[theme.breakpoints.up('sm')]: {
 			height: '320px',
@@ -42,11 +40,12 @@ export const CustomSwipeableViews = styled(AutoPlaySwipeableViews, {
 	'& .react-swipeable-view-slider': {
 		'&:first-of-type': {},
 		//below 600
-
+		position: 'relative',
+		zIndex: 2,
 		minWidth: '278px',
 		height: '494px',
 		zIndex: 2,
-		backgroundColor: '#fff',
+
 		opacity: 0.99,
 		[theme.breakpoints.up('sm')]: {
 			minWidth: '569px',
