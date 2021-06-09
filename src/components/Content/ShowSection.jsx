@@ -12,7 +12,9 @@ const gallery_1 = [
 	{
 		url: { md: './gallery_image/1971_md.jpg', sm: './gallery_image/1971_md.jpg', xs: './gallery_image/1971_sm.jpg' },
 		label: '1971',
-		logo: './gallery_image/1971_logo.png'
+		logo: './gallery_image/1971_logo.png',
+		genre: 'Documentary',
+		caption: 'A tumultuous era sparked a year of unprecedented musical innovation.'
 	},
 	{
 		url: {
@@ -21,7 +23,9 @@ const gallery_1 = [
 			xs: './gallery_image/forallmankind_sm.jpg'
 		},
 		label: 'For All Mankind',
-		logo: './gallery_image/forallmankind_logo.png'
+		logo: './gallery_image/forallmankind_logo.png',
+		genre: 'Drama',
+		caption: 'the race continues'
 	},
 
 	{
@@ -31,7 +35,9 @@ const gallery_1 = [
 			xs: './gallery_image/homebeforedark_sm.jpg'
 		},
 		label: 'Home before dark',
-		logo: './gallery_image/homebeforedark_logo.png'
+		logo: './gallery_image/homebeforedark_logo.png',
+		genre: 'Drama',
+		caption: 'follow the truth'
 	},
 	{
 		url: {
@@ -40,7 +46,9 @@ const gallery_1 = [
 			xs: `./gallery_image/lisey's story_sm.jpg`
 		},
 		label: 'Lisey story',
-		logo: `./gallery_image/lisey's story_logo.png`
+		logo: `./gallery_image/lisey's story_logo.png`,
+		genre: 'Drama',
+		caption: 'Julianne Moore stars in a chilling series based on the novel by Stephen King.'
 	},
 	{
 		url: {
@@ -49,12 +57,16 @@ const gallery_1 = [
 			xs: `./gallery_image/mythic quest sm.jpg`
 		},
 		label: 'mythic quest',
-		logo: './gallery_image/mythic quest_logo.png'
+		logo: './gallery_image/mythic quest_logo.png',
+		genre: 'Comedy',
+		caption: 'the stuff of legends '
 	},
 	{
 		url: { md: `./gallery_image/palmer_md.jpg`, sm: `./gallery_image/palmer_md.jpg`, xs: `palmer_sm.jpg` },
 		label: 'palmer',
-		logo: './gallery_image/palmer_logo.png'
+		logo: './gallery_image/palmer_logo.png',
+		genre: 'Drama',
+		caption: 'family is who you make it'
 	},
 
 	{
@@ -64,7 +76,9 @@ const gallery_1 = [
 			xs: `./gallery_image/physical_sm.jpg`
 		},
 		label: 'physical',
-		logo: './gallery_image/physical_logo.png'
+		logo: './gallery_image/physical_logo.png',
+		genre: 'Comedy',
+		captino: 'work out your issues'
 	},
 	{
 		url: {
@@ -73,7 +87,9 @@ const gallery_1 = [
 			xs: './gallery_image/Snoopy_sm.jpg'
 		},
 		label: 'snoopy',
-		logo: './gallery_image/Snoopy_logo.png'
+		logo: './gallery_image/Snoopy_logo.png',
+		genre: 'Documentary',
+		caption: '	Before there was Charlie Brown, there was Schulz'
 	},
 	{
 		url: {
@@ -82,7 +98,9 @@ const gallery_1 = [
 			xs: './gallery_image/ted lasso_sm.jpg'
 		},
 		label: 'ted lasso',
-		logo: './gallery_image/ted lasso_logo.png'
+		logo: './gallery_image/ted lasso_logo.png',
+		genre: 'Comedy',
+		caption: 'Losing record, winning attitude'
 	},
 	{
 		url: {
@@ -91,7 +109,9 @@ const gallery_1 = [
 			xs: `./gallery_image/the me you can't see_sm.jpg`
 		},
 		label: `the me you can't see`,
-		logo: `./gallery_image/the me you can't see_logo.png`
+		logo: `./gallery_image/the me you can't see_logo.png`,
+		genre: 'Documentary',
+		caption: 'A timely docuseries that shines a light on our invisible pain.'
 	},
 	{
 		url: {
@@ -100,7 +120,9 @@ const gallery_1 = [
 			xs: `./gallery_image/the morning show_sm.jpg`
 		},
 		label: 'the morning show.jpg',
-		logo: './gallery_image/the morning show_logo.png'
+		logo: './gallery_image/the morning show_logo.png',
+		genre: 'Drama',
+		caption: 'the news is only half the story'
 	},
 	{
 		url: {
@@ -109,7 +131,9 @@ const gallery_1 = [
 			xs: `./gallery_image/mosquito coast_sm.jpg`
 		},
 		label: 'the mosquito coast',
-		logo: './gallery_image/mosquito coast_logo.png'
+		logo: './gallery_image/mosquito coast_logo.png',
+		genre: 'Drama',
+		caption: 'How far would you go'
 	},
 	{
 		url: {
@@ -118,7 +142,9 @@ const gallery_1 = [
 			xs: `./gallery_image/Trying_sm.jpg`
 		},
 		label: 'Trying',
-		logo: './gallery_image/Trying_logo.png'
+		logo: './gallery_image/Trying_logo.png',
+		genre: 'Comedy',
+		caption: 'Messing up life. Together'
 	}
 ];
 
@@ -167,6 +193,7 @@ const ShowSection = () => {
 								left: 0,
 								height: '100%',
 								width: '100%',
+								borderRadius: { xs: '24px', sm: '20px', md: '18px' },
 								backgroundImage: {
 									md: 'url(./gallery_image/Snoopy_md.jpg)',
 									sm: `url(./gallery_image/Snoopy_md.jpg)`,
@@ -325,6 +352,10 @@ const ShowSection = () => {
 										fontWeight: 700,
 										letterSpacing: '-.016em',
 										textTransform: 'capitalize'
+									},
+									'&:hover, &:active': {
+										backgroundColor: '#000',
+										color: '#fff'
 									}
 								}}>
 								watch now

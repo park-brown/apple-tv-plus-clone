@@ -44,7 +44,6 @@ export const CustomSwipeableViews = styled(AutoPlaySwipeableViews, {
 		zIndex: 2,
 		minWidth: '278px',
 		height: '494px',
-		zIndex: 2,
 
 		opacity: 0.99,
 		[theme.breakpoints.up('sm')]: {
