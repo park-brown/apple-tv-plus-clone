@@ -1,10 +1,8 @@
 import React from 'react';
-import { Grid, Box, Typography, useScrollTrigger } from '@material-ui/core';
-// import { useTheme } from '@material-ui/core/styles';
-// import { useScroll } from './useScroll';
+import { Grid, Box, Typography } from '@material-ui/core';
+
 import FadeIn from './FadeIn';
 import OfferCard from './OfferCard';
-import { useDimensions } from './useDimensions';
 
 const offerContent = [
 	{
@@ -30,18 +28,9 @@ const offerContent = [
 ];
 
 const OfferSection = () => {
-	// const scroll = useScroll();
-	// const theme = useTheme();
-
-	/*70 - 200 map to 0 - 1*/
-	const ref = React.useRef();
-	const { height } = useDimensions(ref);
-
 	return (
 		<Grid
 			id='offer-section'
-			data-height={height}
-			ref={ref}
 			container
 			component='section'
 			sx={{ position: 'relative', zIndex: 3, height: 'auto', pb: '32px' }}>
@@ -72,19 +61,19 @@ const OfferSection = () => {
 								New Apple Originals every month.
 							</Typography>
 						</FadeIn>
-						<FadeIn start={400} end={500} from={0.001} to={0.99} delay={300} duration={600}>
+						<FadeIn start={400} end={500} from={0.001} to={0.99} delay={400} duration={600}>
 							<Typography variant='h5' sx={{ mt: '50px', fontWeight: 700 }}>
 								Stream on the Apple TV app on Apple devices, smart TVs, consoles, or sticks.
 							</Typography>
 						</FadeIn>
-						<FadeIn start={550} end={650} from={0.001} to={0.99} duration={600}>
+						<FadeIn start={550} end={650} from={0.001} to={0.99} delay={500} duration={600}>
 							<Typography variant='h5' sx={{ mt: '50px', fontWeight: 700 }}>
 								Share Apple TV+ with your family.
 							</Typography>
 						</FadeIn>
 					</Box>
 				</Box>
-				<FadeIn start={750} end={950} from={0.001} to={0.99} duration={600}>
+				<FadeIn start={750} end={950} from={0.001} to={0.99} duration={600} delay={600}>
 					<Grid
 						item
 						container

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Typography, Button } from '@material-ui/core';
+
 const OfferCard = ({ item }) => {
 	return (
 		<Grid
@@ -13,7 +14,8 @@ const OfferCard = ({ item }) => {
 				flexDirection: 'column',
 				justifyContent: 'space-between',
 				alignItems: 'flex-start',
-				pr: { md: `${item.h3 === 'Apple One' ? 'none' : '32px'}`, sm: '0px', xs: '0px' }
+				pr: { md: `${item.h3 === 'Apple One' ? 'none' : '32px'}`, sm: '0px', xs: '0px' },
+				mb: { xs: '60px', sm: '0px', md: '0px' }
 			}}>
 			<Typography
 				variant='h5'
