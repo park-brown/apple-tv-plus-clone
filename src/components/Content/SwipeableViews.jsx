@@ -25,16 +25,16 @@ export const CustomSwipeableViews = styled(AutoPlaySwipeableViews, {
 	},
 	'& .react-swipeable-view-container': {
 		display: 'flex',
-		width: '278px',
+		width: '298px',
 		height: '494px',
 
 		[theme.breakpoints.up('sm')]: {
 			height: '320px',
-			width: '569px'
+			width: '589px'
 		},
 		[theme.breakpoints.up('md')]: {
 			height: '100%',
-			width: '960px'
+			width: '980px'
 		}
 	},
 	'& .react-swipeable-view-slider': {
@@ -44,6 +44,7 @@ export const CustomSwipeableViews = styled(AutoPlaySwipeableViews, {
 		zIndex: 2,
 		minWidth: '278px',
 		height: '494px',
+		marginRight: '20px',
 
 		opacity: 0.99,
 		[theme.breakpoints.up('sm')]: {
