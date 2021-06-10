@@ -5,7 +5,7 @@ import FirstGallery from './FirstGallery';
 
 const ShowSection = () => {
 	return (
-		<Grid container component='section' sx={{ position: 'relative', zIndex: 3, height: '100vh', py: '3rem' }}>
+		<Grid container component='section' sx={{ position: 'relative', zIndex: 3, height: '100vh' }}>
 			{/*Background color */}
 			<Box
 				sx={{
@@ -18,7 +18,7 @@ const ShowSection = () => {
 					zIndex: -1
 				}}></Box>
 			{/*sticky wrapper */}
-			<Grid item container sx={{ position: 'sticky', top: 49, left: 0, height: 'calc(100% - 49px)', zIndex: 1 }}>
+			<Grid item container sx={{ position: 'sticky', top: 65, left: 0, height: 'calc(100% - 49px)', zIndex: 1 }}>
 				<FirstGallery />
 			</Grid>
 		</Grid>

@@ -191,7 +191,7 @@ const FirstGallery = () => {
 				index={activeStep}
 				onChangeIndex={handleStepChange}
 				enableMouseEvents={true}
-				autoplay={false}>
+				autoplay={true}>
 				{/*gallery card */}
 
 				{gallery_1.map((item) => (
