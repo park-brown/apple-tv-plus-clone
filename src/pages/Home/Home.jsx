@@ -5,6 +5,7 @@ import { Grid } from '@material-ui/core';
 import APPBAR from '../../components/AppBar/APPBAR';
 import ShowSection from '../../components/Content/ShowSection';
 import AppleTvSection from '../../components/Content/Section/AppleTvSection';
+import FAQ from '../../components/Content/Section/FAQ';
 const Home = () => {
 	return (
 		<Grid container>
@@ -14,6 +15,7 @@ const Home = () => {
 				<OfferSection />
 				<ShowSection />
 				<AppleTvSection />
+				<FAQ />
 			</Grid>
 		</Grid>
 	);

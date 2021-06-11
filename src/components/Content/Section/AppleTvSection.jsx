@@ -16,7 +16,7 @@ const AppleTv = styled(Grid, {
 		paddingBottom: '150px'
 	}
 }));
-const Content = styled(Box, {
+export const Content = styled(Box, {
 	name: 'section-content'
 })(({ theme }) => ({
 	position: 'relative',
@@ -77,11 +77,11 @@ const SecondDeviceContainer = styled(Box, {
 	name: 'second-device-icon-container'
 })(({ theme }) => ({
 	display: 'flex',
-	flexWrap: 'wrap',
+	flexWrap: 'nowrap',
 	marginBottom: '62px',
 	marginTop: '42px',
 	justifyContent: 'space-between',
-	height: '165px',
+	height: 'auto',
 	width: '100%',
 	[theme.breakpoints.up('sm')]: {
 		width: '580px',
@@ -246,14 +246,15 @@ const AppleTvSection = () => {
 				</Box>
 				<SecondDeviceContainer>
 					{IconGroupTwo.map((item) => (
-						<Box key={item.label}>
+						<Box key={item.label} sx={{ textAlign: 'center' }}>
 							<IconBox item={item} />
 							{item.paragraph.map((p) => {
 								return (
 									<Typography
+										key={p.text}
 										sx={{
 											color: '#6e6e73',
-											textAlign: 'center',
+											// textAlign: 'center',
 											fontWeight: 400,
 											mt: { xs: '0px', sm: '4px' },
 											fontSize: { xs: '14px', sm: '14px', md: '24px' },
