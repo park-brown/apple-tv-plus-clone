@@ -6,6 +6,7 @@ import APPBAR from '../../components/AppBar/APPBAR';
 import ShowSection from '../../components/Content/ShowSection';
 import AppleTvSection from '../../components/Content/Section/AppleTvSection';
 import FAQ from '../../components/Content/Section/FAQ';
+import AppleOneSection from '../../components/Content/Section/AppleOneSection';
 const Home = () => {
 	return (
 		<Grid container>
@@ -16,6 +17,8 @@ const Home = () => {
 				<ShowSection />
 				<AppleTvSection />
 				<FAQ />
+				<AppleOneSection />
+				<Grid item sx={{ height: '40vh' }}></Grid>
 			</Grid>
 		</Grid>
 	);
