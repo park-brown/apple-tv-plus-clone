@@ -7,6 +7,7 @@ import ShowSection from '../../components/Content/ShowSection';
 import AppleTvSection from '../../components/Content/Section/AppleTvSection';
 import FAQ from '../../components/Content/Section/FAQ';
 import AppleOneSection from '../../components/Content/Section/AppleOneSection';
+import RoutersSection from '../../components/Content/Section/RoutersSection';
 const Home = () => {
 	return (
 		<Grid container>
@@ -18,7 +19,7 @@ const Home = () => {
 				<AppleTvSection />
 				<FAQ />
 				<AppleOneSection />
-				<Grid item sx={{ height: '40vh' }}></Grid>
+				<RoutersSection />
 			</Grid>
 		</Grid>
 	);

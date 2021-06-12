@@ -11,6 +11,7 @@ let theme = createTheme({
 			sm: 600,
 			tablet: 733,
 			md: 960,
+			laptop: 1068,
 			lg: 1280,
 			xl: 1920
 		}

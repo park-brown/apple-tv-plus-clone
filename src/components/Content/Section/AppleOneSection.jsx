@@ -1,8 +1,8 @@
 import React from 'react';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import { Grid, Box, Typography, Link, Button } from '@material-ui/core';
+import { Grid, Box, Typography, Button } from '@material-ui/core';
 import { styled } from '@material-ui/system';
-
+import { BreakLine } from './RoutersSection';
 const Section = styled(Grid, {
 	name: 'Apple-One-section'
 })(({ theme }) => ({
@@ -36,7 +36,7 @@ const SectionContent = styled(Grid, {
 		marginLeft: 'auto',
 		marginRight: 'auto'
 	},
-	[theme.breakpoints.up('md')]: {
+	[theme.breakpoints.up('laptop')]: {
 		maxWidth: '1360px'
 	}
 }));
@@ -56,7 +56,7 @@ const FigureWrapper = styled(Box, {
 		alignItems: 'center',
 		order: 1
 	},
-	[theme.breakpoints.up('md')]: {
+	[theme.breakpoints.up('laptop')]: {
 		justifyContent: 'center',
 		paddingLeft: '3%',
 		height: '100%'
@@ -95,6 +95,7 @@ const AppleOneImage = styled('figure', { name: 'apple-one-image' })(({ theme }) 
 	marginTop: '42px',
 	marginLeft: '30px',
 	marginBottom: '77px',
+	marginRight: '0px',
 	[theme.breakpoints.up('tablet')]: {
 		backgroundImage: 'url(./Apple_one_image/apple_one_medium_2x.jpg)',
 		width: '283px',
@@ -105,15 +106,8 @@ const AppleOneImage = styled('figure', { name: 'apple-one-image' })(({ theme }) 
 		marginLeft: '3%',
 		minWidth: 'auto'
 	},
-	[theme.breakpoints.up('md')]: {
-		backgroundImage: 'url(./Apple_one_image/apple_one_medium_2x.jpg)',
-		marginTop: '96px',
-		marginBottom: '98px',
-		marginLeft: '6%',
-		minWidth: 'auto'
-	},
 
-	[theme.breakpoints.up('lg')]: {
+	[theme.breakpoints.up('laptop')]: {
 		backgroundImage: 'url(./Apple_one_image/apple_one_large_2x.jpg)',
 		width: '544px',
 		height: '330px',
@@ -134,7 +128,7 @@ const TileCopyWrapper = styled(Box, { name: 'copy-wrapper' })(({ theme }) => ({
 		marginTop: '0px',
 		marginLeft: '-14%'
 	},
-	[theme.breakpoints.up('md')]: {
+	[theme.breakpoints.up('laptop')]: {
 		margin: 0
 	}
 }));
@@ -148,26 +142,15 @@ const TileLogo = styled('h2', { name: 'Apple-one-logo' })(({ theme }) => ({
 	[theme.breakpoints.up('tablet')]: {
 		backgroundImage: 'url(./Apple_one_image/apple_one_logo_medium_2x.png)'
 	},
-	[theme.breakpoints.up('md')]: {
+	[theme.breakpoints.up('laptop')]: {
 		backgroundImage: 'url(./Apple_one_image/apple_one_logo_large_2x.png)',
 		backgroundSize: '102px 33px',
 		width: '102px',
 		height: '33px'
 	}
 }));
-const BR_I = styled('br', { name: 'Breakline_display_below_tablet' })(({ theme }) => ({
-	display: 'block',
-	[theme.breakpoints.up('tablet')]: {
-		display: 'none'
-	}
-}));
-const BR_II = styled('br', { name: 'hide_below_tablet' })(({ theme }) => ({
-	display: 'none',
-	[theme.breakpoints.up('tablet')]: {
-		display: 'block'
-	}
-}));
-const SectionButton = styled(Button, { name: 'try-apple-one-free' })(({ theme }) => ({
+
+export const SectionButton = styled(Button, { name: 'try-apple-one-free' })(({ theme }) => ({
 	marginTop: '16px',
 	marginBottom: '29px',
 	padding: '12px 22px',
@@ -182,8 +165,13 @@ const SectionButton = styled(Button, { name: 'try-apple-one-free' })(({ theme })
 	'&:hover': {
 		backgroundColor: '#000'
 	},
-	[theme.breakpoints.up('tablet')]: {
+	[theme.breakpoints.up('sm')]: {
 		fontSize: '14px'
+	},
+	[theme.breakpoints.up('tablet')]: {
+		fontSize: '14px',
+		marginTop: '9px',
+		marginBottom: '16px'
 	},
 	[theme.breakpoints.up('md')]: {
 		fontSize: '14px'
@@ -203,25 +191,43 @@ const AppleOneSection = () => {
 							sx={{
 								m: {
 									xs: '13px 0px 12px 0px',
-									md: '27px 0px 13px 0'
+									md: '13px 0px 13px 0',
+									laptop: '27px 0px 13px 0px'
 								},
-								maxWidth: { xs: '323px', md: '700px' },
-								minWidth: { tablet: '345px' },
+								maxWidth: { xs: '323px' },
+								minWidth: { tablet: '345px', laptop: '500px' },
 								width: { xs: '100%', tablet: '90%', md: 'auto' },
-								textAlign: 'center',
-								fontSize: { xs: '27px', tablet: '24px', md: '30px', lg: '48px' },
-								lineHeight: { xs: 1.07143, tablet: 1.16667, md: 1.08349 },
+								textAlign: { xs: 'center' },
+								fontSize: { xs: '27px', tablet: '23px', md: '23px', laptop: '38px', lg: '38px', xl: '45px' },
+								lineHeight: { xs: 1.07143, tablet: 1.16667, md: 1.08349, laptop: 1.1 },
 								fontWeight: 700,
 								letterSpacing: { xs: '.012em', tablet: '.009em', md: '-.003em' }
 							}}>
-							Bundle Apple TV+ <BR_I />
-							with
-							<BR_II /> up to five other great services.
-							<br />
-							And enjoy more for less.
+							Bundle Apple TV+ <BreakLine xs={true} sm={true} laptop={true} />
+							with <BreakLine tablet={true} md={true} /> up to five other
+							<BreakLine laptop={true} lg={false} xl={false} /> great services.{' '}
+							<BreakLine xs={true} sm={true} laptop={true} lg={false} xl={false} /> And enjoy more for less.
 						</Typography>
 						<SectionButton>Try Apple One free</SectionButton>
-						<Button sx={{ color: 'info.main', textTransform: 'capitalize' }} endIcon={<ArrowForwardIosIcon />}>
+						<Button
+							sx={{
+								color: 'info.main',
+								textTransform: 'capitalize',
+								p: 0,
+								width: '98px',
+								height: '25px',
+								fontSize: { xs: '14px' },
+								lineHeight: { xs: 1.47059 },
+								letterSpacing: { xs: '-.022em' },
+								'& .MuiButton-endIcon': {
+									marginRight: '0px',
+									'& .MuiSvgIcon-root': {
+										width: '12px',
+										height: '20px'
+									}
+								}
+							}}
+							endIcon={<ArrowForwardIosIcon />}>
 							learn more
 						</Button>
 					</TileCopyWrapper>
