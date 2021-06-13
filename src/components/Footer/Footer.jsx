@@ -182,11 +182,10 @@ const Footer = () => {
 					<Box
 						sx={{
 							color: '#a1a1a6',
-							position: 'absolute',
+							position: { xs: 'relative', sm: 'absolute' },
 							minWidth: '30px',
-
-							top: { xs: '28%', sm: '50%' },
-							left: { xs: 0, sm: '85%' }
+							top: { sm: '50%' },
+							right: { sm: 0 }
 						}}>
 						<FootNote sx={{ p: 0 }}>United States</FootNote>
 					</Box>
