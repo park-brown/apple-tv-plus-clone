@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Box, Typography, Button } from '@material-ui/core';
 import { styled } from '@material-ui/system';
 import { SectionButton } from './AppleOneSection';
+
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 const Section = styled(Grid, { name: 'section-routers' })(({ theme }) => ({
 	position: 'relative',
@@ -97,21 +98,22 @@ const ImageWrapper = styled(Box, { name: 'image-wrapper' })(({ theme }) => ({
 export const BreakLine = styled('br', {
 	// Configure which props should be forwarded on DOM   xs === true ? 'block' : 'none'
 	shouldForwardProp: (prop) => prop
-})(({ xs = false, sm = false, tablet = false, md = false, laptop = false, theme }) => ({
-	display: `${xs === true ? 'block' : 'none'}`,
+})(({ xs = 'false', sm = 'false', tablet = 'false', md = 'false', laptop = 'false', theme }) => ({
+	display: `${xs === 'true' ? 'block' : 'none'}`,
 	[theme.breakpoints.up('sm')]: {
-		display: `${sm === true ? 'block' : 'none'}`
+		display: `${sm === 'true' ? 'block' : 'none'}`
 	},
 	[theme.breakpoints.up('tablet')]: {
-		display: `${tablet === true ? 'block' : 'none'}`
+		display: `${tablet === 'true' ? 'block' : 'none'}`
 	},
 	[theme.breakpoints.up('md')]: {
-		display: `${md === true ? 'block' : 'none'}`
+		display: `${md === 'true' ? 'block' : 'none'}`
 	},
 	[theme.breakpoints.up('laptop')]: {
-		display: `${laptop === true ? 'block' : 'none'}`
+		display: `${laptop === 'true' ? 'block' : 'none'}`
 	}
 }));
+
 const StudentPlanImage = styled('figure', { name: 'student-plan-image' })(({ theme }) => ({
 	margin: '38px 0 0 0',
 	height: '254px',
@@ -283,9 +285,10 @@ const RoutersSection = () => {
 									mb: { xs: '13px' }
 								}}>
 								The Apple Music Student
-								<BreakLine xs={true} sm={true} laptop={true} lg={true} /> Plan comes with
-								<BreakLine xs={true} sm={true} laptop={true} lg={true} />
-								{/*below 733px show breakline */} Apple TV+ for free.
+								<BreakLine xs='true' sm='true' laptop='true' lg='true' /> Plan comes with
+								<BreakLine xs='true' sm='true' laptop='true' lg='true' />
+								{/* below 733px show breakline  */}
+								Apple TV+ for free.
 							</Typography>
 							<SectionButton sx={{ mb: { xs: 0 }, mt: { xs: '13px' } }}>Try Apple Music free</SectionButton>
 						</TextContainer>
@@ -362,7 +365,7 @@ const RoutersSection = () => {
 									mt: '5px',
 									mb: { xs: '12px', tablet: '9px', laptop: '23px' }
 								}}>
-								Bring Apple TV+ to <BreakLine xs={true} sm={true} tablet={true} md={true} laptop={true} /> a screen near
+								Bring Apple TV+ to <BreakLine xs='true' sm='true' tablet='true' md='true' laptop='true' /> a screen near
 								you.
 							</Typography>
 							<Button

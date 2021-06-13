@@ -8,6 +8,7 @@ import AppleTvSection from '../../components/Content/Section/AppleTvSection';
 import FAQ from '../../components/Content/Section/FAQ';
 import AppleOneSection from '../../components/Content/Section/AppleOneSection';
 import RoutersSection from '../../components/Content/Section/RoutersSection';
+import Footer from '../../components/Footer/Footer';
 const Home = () => {
 	return (
 		<Grid container>
@@ -21,6 +22,7 @@ const Home = () => {
 				<AppleOneSection />
 				<RoutersSection />
 			</Grid>
+			<Footer />
 		</Grid>
 	);
 };

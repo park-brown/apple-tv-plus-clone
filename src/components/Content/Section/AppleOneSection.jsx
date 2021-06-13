@@ -203,10 +203,10 @@ const AppleOneSection = () => {
 								fontWeight: 700,
 								letterSpacing: { xs: '.012em', tablet: '.009em', md: '-.003em' }
 							}}>
-							Bundle Apple TV+ <BreakLine xs={true} sm={true} laptop={true} />
-							with <BreakLine tablet={true} md={true} /> up to five other
-							<BreakLine laptop={true} lg={false} xl={false} /> great services.{' '}
-							<BreakLine xs={true} sm={true} laptop={true} lg={false} xl={false} /> And enjoy more for less.
+							Bundle Apple TV+ <BreakLine xs={'true'} sm={'true'} laptop={'true'} />
+							with <BreakLine tablet={'true'} md={'true'} /> up to five other
+							<BreakLine laptop={'true'} lg={'false'} xl={'false'} /> great services.{' '}
+							<BreakLine xs={'true'} sm={'true'} laptop={'true'} lg={'false'} xl={'false'} /> And enjoy more for less.
 						</Typography>
 						<SectionButton>Try Apple One free</SectionButton>
 						<Button

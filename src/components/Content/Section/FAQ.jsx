@@ -97,7 +97,7 @@ const FAQ = () => {
 				{/*Accordion group */}
 				<Box sx={{ width: '100%', height: '100%' }}>
 					{FAQ_Info.map((item) => (
-						<CustomAccordionItem key={item.summary} item={item} />
+						<CustomAccordionItem key={item.summery} item={item} />
 					))}
 				</Box>
 			</Content>
